@@ -4,8 +4,8 @@ const app = express()
 
 const PORT = 3000
 
-app.get('/api/user',(req,res)=>{
-    res.status(200).json({api:"user"})
+app.get('/api/note',(req,res)=>{
+    res.status(200).json({api:"note"})
 })
 
 app.listen(PORT,()=>{console.log(`server running on port ${PORT}`)})
