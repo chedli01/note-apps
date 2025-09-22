@@ -4,6 +4,7 @@ import Home from './pages/home'
 import Notes from './pages/notes'
 import Login from './pages/login'
 import Signup from './pages/signup'
+import EditNote from './pages/editNote'
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
       <Route element={<Notes/>} path='notes' />
       <Route element={<Login/>} path='login'/>
       <Route element={<Signup/>} path='signup'/>
+      <Route element={<EditNote/>} path='editNote/:id'/>
+
 
     
     </Routes>

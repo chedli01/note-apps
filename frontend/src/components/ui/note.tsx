@@ -1,4 +1,5 @@
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 // type NoteProps = {
 //   title: string;
@@ -7,9 +8,9 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 // };
 
 export default function Note({id,title,updateNotes}:any) {
+    const navigate = useNavigate()
     const onEdit  = ()=>{
-        console.log('editing')
-        
+        navigate(`/editNote/${id}`)
     }
     const onDelete = ()=>{
        updateNotes((prevNotes:any) => prevNotes.filter((note:any) => note.id !== id));
