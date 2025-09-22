@@ -6,7 +6,7 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 //   onDelete?: () => void;
 // };
 
-export default function Note() {
+export default function Note({title}:any) {
     const onEdit  = ()=>{
         console.log('editing')
         
@@ -16,7 +16,7 @@ export default function Note() {
     }
   return (
     <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-      <span className="text-gray-800 font-medium">xx</span>
+      <span className="text-gray-800 font-medium">{title}</span>
       <div className="flex space-x-3">
         <button
           onClick={onEdit}
