@@ -11,7 +11,7 @@ export default function Notes() {
     return (
         <div className="w-screen h-screen  flex items-center justify-center">
             <div className="w-1/2 h-1/2 ">
-            {notes.map((element)=>{return <Note key={element.id} title={element.title}/> })}
+            {notes.map((element)=>{return <Note key={element.id} id={element.id} title={element.title} updateNotes={setNotes}/> })}
                 
             </div>
         </div>

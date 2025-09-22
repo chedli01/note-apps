@@ -6,13 +6,13 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 //   onDelete?: () => void;
 // };
 
-export default function Note({title}:any) {
+export default function Note({id,title,updateNotes}:any) {
     const onEdit  = ()=>{
         console.log('editing')
         
     }
     const onDelete = ()=>{
-        console.log("deleting")
+       updateNotes((prevNotes:any) => prevNotes.filter((note:any) => note.id !== id));
     }
   return (
     <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
